@@ -34,7 +34,6 @@ public class SecurityConfig {
         http.authorizeHttpRequests(authorize -> authorize
                 .requestMatchers("api/admin/**").hasAnyAuthority("ADMIN")
                 .requestMatchers("api/staff/**").hasAnyAuthority("STAFF","ADMIN")
-                .requestMatchers("api/student/**").hasAnyAuthority("STUDENT")
                 .anyRequest().authenticated());
         http.addFilterBefore(filterService, UsernamePasswordAuthenticationFilter.class);
         return http.build();
