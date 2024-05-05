@@ -1,4 +1,4 @@
-package com.example.reactbackend.util;
+package com.example.vms.util;
 
 import lombok.Getter;
 

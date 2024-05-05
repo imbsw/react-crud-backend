@@ -1,6 +1,6 @@
-package com.example.reactbackend.dto.endpoints;
+package com.example.vms.dto.endpoints;
 
-import com.example.reactbackend.util.ResponseCode;
+import com.example.vms.util.ResponseCode;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
