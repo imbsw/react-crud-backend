@@ -1,0 +1,19 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: vehicle-management
+  datasource:
+    url: ${DATASOURCE_URL:jdbc:mariadb://localhost:3306/vms}
+    driverClassName: ${DATASOURCE_DRIVER:org.mariadb.jdbc.Driver}
+    username: ${DATASOURCE_USERNAME:buddhima}
+    password: ${DATASOURCE_PASSWORD:C5lus9tering}
+  jpa:
+    database-platform: org.hibernate.dialect.MariaDBDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+api:
+  jwtSecret: 3mdfGZB5Cx8k75Adfgfdsvsdcwwdqw324efwefwedwefewcwcewe

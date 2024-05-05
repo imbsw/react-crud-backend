@@ -1,0 +1,79 @@
+{
+	"info": {
+		"_postman_id": "ca87c7f9-56e3-4165-a5cc-8a322f65b27f",
+		"name": "vms",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25664776",
+		"_collection_link": "https://interstellar-firefly-316052.postman.co/workspace/RIMS~35e1b2fc-0dd7-4793-84f2-876e19bb17e8/collection/25664776-ca87c7f9-56e3-4165-a5cc-8a322f65b27f?action=share&source=collection_link&creator=25664776"
+	},
+	"item": [
+		{
+			"name": "SignUp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\": \"buddhima\",\r\n    \"password\": \"12345\",\r\n    \"userType\": \"ADMIN\",\r\n    \"firstName\": \"Buddhima\",\r\n    \"lastName\": \"Sahabandu\",\r\n    \"middleName\": \"Chamaranga\",\r\n    \"gender\": \"MALE\",\r\n    \"email\": \"buddhimachamaranga@gmail.com\",\r\n    \"phoneNumber\": \"0716457737\",\r\n    \"nic\": \"960471628v\",\r\n    \"address\": \"Tangalle\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/v1/signup",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "authenticate",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {token}",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\": \"buddhima\",\r\n    \"password\": \"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/v1/authenticate",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
